@@ -12,7 +12,7 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: script/laravel_permission
+    - location: scripts/laravel_permission
       timeout: 300
       runas: root
   ApplicationStop:
