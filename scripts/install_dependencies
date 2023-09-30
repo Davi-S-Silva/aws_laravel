@@ -7,7 +7,7 @@ export APACHE="apache2"
 
 sudo $INSTALLER update
 # sudo apt dist-upgrade
-sudo $INSTALLER install $APACHE
+sudo $INSTALLER install -y $APACHE
 # sudo $INSTALLER install software-properties-common
 # sudo add-apt-repository ppa:ondrej/php
 sudo $INSTALLER install -y php8.0
