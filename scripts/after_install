@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Project directory on server for your project.
-export WEB_DIR="/var/www/html/laravel"
+export WEB_DIR="/var/www/html"
 # Your server user. Used to fix permission issue & install our project dependcies
-export WEB_USER="ubuntu"
+export WEB_USER="root"
 
 
 # Change directory to project.
