@@ -11,10 +11,11 @@ export WEB_USER="ubuntu"
 cd $WEB_DIR
 
 # change user owner to ubuntu & fix storage permission issues.
-sudo chown -r $WEB_USER:$WEB_USER
-sudo chown -R www-data storage
-sudo chmod -R 777
+sudo chown $WEB_USER:$WEB_USER 
+sudo chown www-data storage
+# sudo chmod -R 777
 sudo chmod -r 777 storage
+# sudo chmod -r 777 storage/*
 
 # install composer dependcies
 # composer install --no-dev --no-progress --prefer-dist
@@ -22,6 +23,7 @@ sudo -u $WEB_USER composer install --no-dev --no-progress --prefer-dist
 
 # load .env file from AWS Systems Manager
 # ./devops/scripts/generate-env
+sudo mv .env.example .env
 
 # generate app key & run migrations
 # php artisan key:generate
