@@ -1,7 +1,7 @@
-version: 0.0
+version: 1.0
 os: linux
 files:
-  - source: ./applaravel/
+  - source: applaravel/
     destination: /var/www/html
 hooks:
   BeforeInstall:
