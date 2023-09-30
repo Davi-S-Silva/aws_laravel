@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: ./applaravel/
-    destination: /var/www/html/laravel/
+    destination: /var/www/laravel
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
