@@ -3,17 +3,18 @@
 # Project directory on server for your project.
 export WEB_DIR="/var/www/html"
 # Your server user. Used to fix permission issue & install our project dependcies
-export WEB_USER="root"
+export WEB_USER="ubuntu"
+# export WEB_USER="root"
 
 
 # Change directory to project.
 cd $WEB_DIR
 
 # change user owner to ubuntu & fix storage permission issues.
-# sudo chown -r $WEB_USER:$WEB_USER
-# sudo chown -R www-data storage
-# sudo chmod -R 777
-# sudo chmod -r 777 storage
+sudo chown -r $WEB_USER:$WEB_USER
+sudo chown -R www-data storage
+sudo chmod -R 777
+sudo chmod -r 777 storage
 
 # install composer dependcies
 # composer install --no-dev --no-progress --prefer-dist
