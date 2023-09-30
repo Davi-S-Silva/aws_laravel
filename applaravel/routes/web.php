@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', function () {
+    echo 'ola mundo';
+    // $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/';
+    // try {
+    //     Storage::disk('s3')->put(
+    //         'files\teste.jpg',
+    //         file_get_contents('C:\Users\davie\Downloads\teste.jpg')
+    //     );
 
-    $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/';
-    try {
-        Storage::disk('s3')->put(
-            'files\teste.jpg',
-            file_get_contents('C:\Users\davie\Downloads\teste.jpg')
-        );
-
-        return ('Image uploaded successfully');
-    } catch (Exception $exception) {
-        echo $exception->getMessage();
-        exit("Please fix error with file upload before continuing.");
-    }
+    //     return ('Image uploaded successfully');
+    // } catch (Exception $exception) {
+    //     echo $exception->getMessage();
+    //     exit("Please fix error with file upload before continuing.");
+    // }
 });
 
 
