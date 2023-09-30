@@ -10,7 +10,7 @@ export WEB_USER="root"
 cd $WEB_DIR
 
 # change user owner to ubuntu & fix storage permission issues.
-# sudo chown -R ubuntu:ubuntu
+sudo chown -R $WEB_USER:$WEB_USER
 # sudo chown -R www-data storage
 sudo chmod -R u+x
 sudo chmod g+w -R storage
