@@ -3,7 +3,7 @@
 # Project directory on server for your project.
 export WEB_DIR="/var/www/html"
 # Your server user. Used to fix permission issue & install our project dependcies
-export WEB_USER="root"
+# export WEB_USER="root"
 
 
 # Change directory to project.
@@ -16,11 +16,14 @@ cd $WEB_DIR
 # sudo chmod g+w -R storage
 
 # install composer dependcies
-sudo -u $WEB_USER composer install --no-dev --no-progress --prefer-dist
+sudo composer install --no-dev --no-progress --prefer-dist
+# sudo -u $WEB_USER composer install --no-dev --no-progress --prefer-dist
 
 # load .env file from AWS Systems Manager
 # ./devops/scripts/generate-env
 
 # generate app key & run migrations
-sudo -u $WEB_USER php artisan key:generate
-sudo -u $WEB_USER php artisan migrate --force --no-interaction
+sudo php artisan key:generate
+# sudo -u $WEB_USER php artisan key:generate
+sudo php artisan migrate --force --no-interaction
+# sudo -u $WEB_USER php artisan migrate --force --no-interaction
