@@ -24,7 +24,7 @@ Route::get('/', function () {
 
         return ('Image uploaded successfully');
     } catch (Exception $exception) {
-        echo "Failed to upload $file_name with error: " . $exception->getMessage();
+        echo $exception->getMessage();
         exit("Please fix error with file upload before continuing.");
     }
 });
