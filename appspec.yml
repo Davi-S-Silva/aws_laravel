@@ -10,7 +10,7 @@ hooks:
       runas: root
     - location: scripts/start_server
       timeout: 300
-      runas: root
+      runas: ubuntu
   # AfterInstall:
   #   - location: scripts/laravel_permission
   #     timeout: 300
@@ -18,5 +18,5 @@ hooks:
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
-      runas: root
+      runas: ubuntu
 
