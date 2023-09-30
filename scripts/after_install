@@ -13,7 +13,7 @@ cd $WEB_DIR
 # sudo chown -r $WEB_USER:$WEB_USER
 # sudo chown -R www-data storage
 # sudo chmod -R 777
-sudo chmod 777 -r storage
+sudo chmod -r 777 storage
 
 # install composer dependcies
 # composer install --no-dev --no-progress --prefer-dist
