@@ -11,10 +11,10 @@ export WEB_USER="ubuntu"
 cd $WEB_DIR
 
 # change user owner to ubuntu & fix storage permission issues.
-sudo chown $WEB_USER:$WEB_USER 
-sudo chown www-data storage
-# sudo chmod -R 777
-sudo chmod -r 777 storage
+sudo chown -r $WEB_USER:$WEB_USER .
+sudo chown -r www-data storage
+sudo chmod -r u+x .
+sudo chmod -r g+w storage
 # sudo chmod -r 777 storage/*
 
 # install composer dependcies
