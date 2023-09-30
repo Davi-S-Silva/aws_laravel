@@ -2,21 +2,20 @@ version: 0.0
 os: linux
 files:
   - source: applaravel/
-    destination: /var/www/html/
+    destination: /var/www/laravel/
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: ubuntu
-    - location: scripts/start_server
-      timeout: 300
-      runas: ubuntu
-  # AfterInstall:
-  #   - location: scripts/laravel_permission
+  # BeforeInstall:
+  #   - location: scripts/install_dependencies
   #     timeout: 300
-  #     runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
+  #     runas: ubuntu
+  #   - location: scripts/start_server
+  #     timeout: 300
+  #     runas: ubuntu
+  AfterInstall:
+    - location: scripts/after_install
       runas: ubuntu
+  # ApplicationStop:
+  #   - location: scripts/stop_server
+  #     timeout: 300
+  #     runas: ubuntu
 
