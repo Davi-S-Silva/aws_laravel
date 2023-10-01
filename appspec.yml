@@ -1,16 +1,16 @@
 version: 1.0
 os: linux
 files:
-  - source: ./applaravel/
+  - source: applaravel/
     destination: /var/www/html
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
-      timeout: 300
+      timeout: 30
       runas: ubuntu
       # runas: root
     - location: scripts/start_server
-      timeout: 300
+      timeout: 30
       runas: ubuntu
       # runas: root
   # AfterInstall:
