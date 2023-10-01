@@ -1,14 +1,14 @@
 version: 1.0
 os: linux
 files:
-  - source: /
+  - source: ./applaravel
     destination: /var/www/html/laravel
 hooks:
   AfterInstall:
-    - location: ./scripts/after-install.sh
+    - location: scripts/after_install.sh
       runas: ubuntu
   ApplicationStop:
-    - location: ./scripts/stop_server.sh
+    - location: scripts/stop_server.sh
       timeout: 120
       runas: ubuntu
   
