@@ -1,9 +1,9 @@
 version: 1.0
 os: linux
 files:
-  - source: /applaravel/
+  - source: /
     destination: /var/www/html/laravel/
-      hooks:
+hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
