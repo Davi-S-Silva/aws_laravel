@@ -6,7 +6,7 @@ export INSTALLER_GET="apt-get"
 # export APACHE="httpd"
 export APACHE="apache2"
 
-sudo $INSTALLER update -y
+sudo $INSTALLER update
 # sudo apt dist-upgrade
 sudo $INSTALLER install -y $APACHE
 # sudo $INSTALLER install software-properties-common

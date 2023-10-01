@@ -5,7 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
+# .env # por questao de teste de implementacao e rapidez o .env vai pra o git.
 .env.backup
 .env.production
 .phpunit.result.cache
