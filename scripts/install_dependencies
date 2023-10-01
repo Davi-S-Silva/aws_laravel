@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# sudo rm -rf /var/www/html/*
-
-# export INSTALLER="yum"
 export INSTALLER="apt"
 export INSTALLER_GET="apt-get"
 # export APACHE="httpd"
