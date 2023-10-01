@@ -5,23 +5,23 @@ files:
     destination: /var/www/html/laravel/
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: ./scripts/install_dependencies.sh
       timeout: 300
-      # runas: ubuntu
-      runas: root
-    - location: scripts/start_server.sh
+      runas: ubuntu
+      # runas: root
+    - location: ./scripts/start_server.sh
       timeout: 300
       runas: ubuntu
       # runas: root
   AfterInstall:
-    - location: scripts/after_install.sh
+    - location: ./scripts/after_install.sh
       timeout: 300
-      # runas: ubuntu
+      runas: ubuntu
       # runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: ./scripts/stop_server.sh
       timeout: 300
-      # runas: ubuntu
+      runas: ubuntu
       # runas: root
   
 
